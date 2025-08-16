@@ -1,0 +1,141 @@
+/* VARIABEL */
+:root {
+  --primary: #4e73df;
+  --secondary: #858796;
+  --success: #1cc88a;
+  --info: #36b9cc;
+  --warning: #f6c23e;
+  --danger: #e74a3b;
+  --light: #f8f9fc;
+  --dark: #5a5c69;
+}
+
+/* DASAR */
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #f8f9fc;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+/* SIDEBAR */
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background: var(--primary);
+  color: white;
+  transition: all 0.3s;
+  min-height: 100vh;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: var(--primary);
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+}
+
+#sidebar ul li a {
+  padding: 10px 15px;
+  font-size: 1.1em;
+  display: block;
+  color: white;
+}
+
+#sidebar ul li a:hover {
+  color: var(--primary);
+  background: white;
+}
+
+/* KONTEN UTAMA */
+#content {
+  width: 100%;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+/* NAVBAR */
+.navbar {
+  padding: 15px 10px;
+  background: white;
+  border: none;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+/* CARD */
+.card {
+  border: none;
+  border-radius: 0.35rem;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.1);
+}
+
+.card-header {
+  background-color: #f8f9fc;
+  border-bottom: 1px solid #e3e6f0;
+}
+
+/* TABEL */
+.table {
+  font-size: 0.9rem;
+}
+
+.table th {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  border-top: none;
+}
+
+/* RESPONSIF */
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+  
+  #sidebar.active {
+    margin-left: 0;
+  }
+  
+  #content {
+    width: 100%;
+  }
+  
+  #content.active {
+    width: calc(100% - 250px);
+  }
+  
+  .table-responsive {
+    border: none;
+  }
+  /* Efek konten geser saat sidebar toggle */
+#content {
+  transition: all 0.3s;
+}
+
+#content.active {
+  width: calc(100% - 250px);
+  margin-left: 250px;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+@media (max-width: 768px) {
+  #content.active {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+}

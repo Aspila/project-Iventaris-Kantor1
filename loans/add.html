@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventaris Kantor - Tambah Peminjaman</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/css/style.css" rel="stylesheet">
+  <link href="../../assets/css/custom.css" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Sidebar (sama seperti sebelumnya) -->
+    <!-- Content -->
+    <div id="content">
+      <!-- Top Navigation (sama seperti sebelumnya) -->
+      
+      <!-- Main Content -->
+      <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../../index.html">Dashboard</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Peminjaman</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Tambah Peminjaman</li>
+          </ol>
+        </nav>
+
+        <div class="card shadow mb-4">
+          <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Form Peminjaman Barang</h6>
+          </div>
+          <div class="card-body">
+            <form id="loanForm">
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="pegawai" class="form-label">Pegawai <span class="text-danger">*</span></label>
+                  <select class="form-select" id="pegawai" required>
+                    <option value="">Pilih Pegawai</option>
+                    <option value="1">Budi Santoso (IT)</option>
+                    <option value="2">Andi Wijaya (Marketing)</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="barang" class="form-label">Barang <span class="text-danger">*</span></label>
+                  <select class="form-select" id="barang" required>
+                    <option value="">Pilih Barang</option>
+                    <option value="1">Laptop Dell XPS 15 (INV-2023-001)</option>
+                    <option value="2">Proyektor Epson (INV-2023-002)</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="tanggalPinjam" class="form-label">Tanggal Pinjam <span class="text-danger">*</span></label>
+                  <input type="date" class="form-control" id="tanggalPinjam" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="tanggalKembali" class="form-label">Tanggal Kembali <span class="text-danger">*</span></label>
+                  <input type="date" class="form-control" id="tanggalKembali" required>
+                </div>
+              </div>
+              
+              <div class="mb-3">
+                <label for="tujuan" class="form-label">Tujuan Peminjaman <span class="text-danger">*</span></label>
+                <textarea class="form-control" id="tujuan" rows="3" required></textarea>
+              </div>
+              
+              <div class="mb-3">
+                <label for="catatan" class="form-label">Catatan</label>
+                <textarea class="form-control" id="catatan" rows="2"></textarea>
+              </div>
+              
+              <div class="d-flex justify-content-between">
+                <a href="index.html" class="btn btn-secondary">Kembali</a>
+                <button type="submit" class="btn btn-primary">Simpan Peminjaman</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/script.js"></script>
+  <script>
+    document.getElementById('loanForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      if(validateForm('loanForm')) {
+        alert('Peminjaman berhasil dicatat!');
+        window.location.href = 'index.html';
+      }
+    });
+  </script>
+</body>
+</html>

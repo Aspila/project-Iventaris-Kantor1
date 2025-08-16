@@ -1,0 +1,60 @@
+/* Badge variants */
+.badge {
+  font-weight: 500;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
+  letter-spacing: 0.5px;
+}
+
+/* Button styling */
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+/* Form styling */
+.form-label {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+/* Card header */
+.card-header {
+  padding: 0.75rem 1.25rem;
+}
+
+/* Table actions */
+.table-actions {
+  white-space: nowrap;
+  width: 1%;
+}
+
+/* QR Code container */
+.qr-code-container {
+  display: inline-block;
+  padding: 1rem;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 0.25rem;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  font-size: 0.85rem;
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* Item image */
+.item-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+  border: 1px solid #eee;
+}
+
+/* Detail card */
+.detail-card {
+  border-left: 4px solid var(--primary);
+}

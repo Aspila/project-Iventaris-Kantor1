@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventaris Kantor - Detail Peminjaman</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/css/style.css" rel="stylesheet">
+  <link href="../../assets/css/custom.css" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Sidebar (sama seperti sebelumnya) -->
+    <!-- Content -->
+    <div id="content">
+      <!-- Top Navigation (sama seperti sebelumnya) -->
+      
+      <!-- Main Content -->
+      <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../../index.html">Dashboard</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Peminjaman</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Detail Peminjaman</li>
+          </ol>
+        </nav>
+
+        <div class="card shadow mb-4">
+          <div class="card-header py-3 d-flex justify-content-between align-items-center">
+            <h6 class="m-0 font-weight-bold text-primary">Detail Peminjaman #PJM-2023-001</h6>
+            <div>
+              <button class="btn btn-sm btn-success me-2">
+                <i class="bi bi-check-circle"></i> Tandai Dikembalikan
+              </button>
+              <a href="index.html" class="btn btn-sm btn-secondary">
+                <i class="bi bi-arrow-left"></i> Kembali
+              </a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Peminjam</label>
+                  <p>Budi Santoso (IT Department)</p>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Barang Dipinjam</label>
+                  <p>Laptop Dell XPS 15 (INV-2023-001)</p>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Tanggal Pinjam</label>
+                  <p>15 Juli 2023</p>
+                </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Tanggal Kembali</label>
+                  <p>20 Juli 2023 (Estimasi)</p>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Status</label>
+                  <p><span class="badge bg-warning text-dark">Sedang Dipinjam</span></p>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Keterangan</label>
+                  <p>Untuk kebutuhan training karyawan baru</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-4">
+              <div class="col-12">
+                <h5 class="mb-3 fw-bold">Riwayat Peminjaman</h5>
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Tanggal</th>
+                        <th>Status</th>
+                        <th>Keterangan</th>
+                        <th>Oleh</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>15 Juli 2023 09:30</td>
+                        <td><span class="badge bg-primary">Dipinjam</span></td>
+                        <td>Peminjaman disetujui</td>
+                        <td>Admin (Budi)</td>
+                      </tr>
+                      <tr>
+                        <td>14 Juli 2023 14:15</td>
+                        <td><span class="badge bg-info">Diajukan</span></td>
+                        <td>Menunggu persetujuan</td>
+                        <td>System</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/script.js"></script>
+</body>
+</html>
